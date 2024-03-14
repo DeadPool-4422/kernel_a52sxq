@@ -1,3 +1,4 @@
 /toolchain/
 /debian/changelog
 /out/
+/debian/linux-*
