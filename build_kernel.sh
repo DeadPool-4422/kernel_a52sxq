@@ -1,3 +1,5 @@
+$(pwd)/setup_toolchain.sh
+
 SRC_DIR=$(pwd)
 TC_DIR=$(pwd)/toolchain/
 JOBS=$(nproc)
