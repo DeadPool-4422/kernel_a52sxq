@@ -2,6 +2,7 @@
 /debian/changelog
 /out/
 /debian/linux-*
+/debian/files
 /debian/path-override
 /debian/debhelper-build-stamp
 /debian/.debhelper/
