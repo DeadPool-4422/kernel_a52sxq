@@ -1,0 +1,14 @@
+Package: linux-image-5.4-147-samsung-a52sxq
+Source: linux-android-samsung-a52sxq
+Version: 0.0.0+git20240314151632.e7f3ffa.main
+Architecture: arm64
+Maintainer: Droidian porters <info@droidian.org>
+Installed-Size: 63359
+Section: kernel
+Priority: optional
+Description: Linux kernel for Samsung Galaxy A52s
+ This package contains the Linux kernel for the Samsung Galaxy A52s device.
+ .
+ Note: This package only ships the kernel image and modules, you should probably
+ look at the linux-bootimage-5.4-147-samsung-a52sxq package for a bootimage suitable
+ for Android boot loaders.

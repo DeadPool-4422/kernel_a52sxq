@@ -1,0 +1,5 @@
+linux-android-samsung-a52sxq (0.0.0+git20240314151632.e7f3ffa.main) main; urgency=medium
+
+  * initial commmit for kernel source
+
+ -- DeadPool-4422 <dynamicplayer444@gmail.com>  Thu, 14 Mar 2024 20:46:32 +0530

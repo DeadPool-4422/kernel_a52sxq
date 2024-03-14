@@ -11,7 +11,7 @@ VARIANT = android
 KERNEL_BASE_VERSION = 5.4-147
 
 # The kernel cmdline to use
-KERNEL_BOOTIMAGE_CMDLINE = droidian.lvm.prefer systemd.unified_cgroup_hierarchy=0 datapart=/dev/block/mmcblk1p1 console=tty0 androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket firmware_class.path=/vendor/firmware_mnt/image pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 printk.devkmsg=on buildvariant=userdebug
+KERNEL_BOOTIMAGE_CMDLINE = droidian.lvm.prefer systemd.unified_cgroup_hierarchy=0 datapart=/dev/block/mmcblk1p1 console=null androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket firmware_class.path=/vendor/firmware_mnt/image pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 printk.devkmsg=on buildvariant=userdebug
 
 # Slug for the device vendor. This is going to be used in the KERNELRELASE
 # and package names.
@@ -40,7 +40,7 @@ KERNEL_CONFIG_USE_DIFFCONFIG = 0
 # KERNEL_PRODUCT_DIFFCONFIG = my_diffconfig
 
 # Defconfig to use
-KERNEL_DEFCONFIG = defconfig
+KERNEL_DEFCONFIG = vendor/lineage-a52sxq_defconfig
 
 # Whether to include DTBs with the image. Use 0 (no) or 1.
 # GKI devices should set this to 0
@@ -110,7 +110,7 @@ KERNEL_BOOTIMAGE_VERSION = 3
 # Kernel initramfs compression. Defaults to gzip.
 # All non-gki devices need a gzip (gz) initramfs
 # For devices launched with a GKI kernel it can be either gzip (gz) or lz4 (lz4)
-KERNEL_INITRAMFS_COMPRESSION = gz
+KERNEL_INITRAMFS_COMPRESSION = lz4
 
 ########################################################################
 # Android verified boot
@@ -197,12 +197,12 @@ BUILD_LLVM = 0
 
 # Extra paths to prepend to the PATH variable. You'll probably want
 # to specify the clang path here (the default).
-BUILD_PATH = /build/sources/toolchain/bin
+BUILD_PATH = /buildd/sources/toolchain/bin
 
 # Extra packages to add to the Build-Depends section. Mainline builds
 # can have this section empty, unless cross-building.
 # The default is enough to install the Android toolchain, including clang.
-DEB_TOOLCHAIN = linux-initramfs-halium-generic:arm64, binutils-aarch64-linux-gnu, gcc-4.9-aarch64-linux-android, g++-4.9-aarch64-linux-android, libgcc-4.9-dev-aarch64-linux-android-cross
+DEB_TOOLCHAIN = linux-initramfs-halium-generic:arm64, binutils-aarch64-linux-gnu, gcc-4.9-aarch64-linux-android, g++-4.9-aarch64-linux-android, libgcc-4.9-dev-aarch64-linux-android-cross, lz4
 
 # Where we're building on
 DEB_BUILD_ON = amd64
@@ -214,4 +214,4 @@ DEB_BUILD_FOR = arm64
 KERNEL_ARCH = arm64
 
 # Kernel target to build
-KERNEL_BUILD_TARGET = Image.gz
+KERNEL_BUILD_TARGET = Image

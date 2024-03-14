@@ -1,0 +1,11 @@
+Package: linux-headers-samsung-a52sxq
+Source: linux-android-samsung-a52sxq
+Version: 0.0.0+git20240314151632.e7f3ffa.main
+Architecture: arm64
+Maintainer: Droidian porters <info@droidian.org>
+Installed-Size: 7
+Depends: linux-headers-5.4-147-samsung-a52sxq (= 0.0.0+git20240314151632.e7f3ffa.main)
+Section: kernel
+Priority: optional
+Description: Linux kernel for Samsung Galaxy A52s - Headers (latest)
+ This package depends to the latest kernel headers available for the Samsung Galaxy A52s.

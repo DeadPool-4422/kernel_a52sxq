@@ -1,0 +1,5 @@
+751ce5534f5cf1b88943948e9ac85a67  boot/boot.img-5.4-147-samsung-a52sxq
+31c4d143e00399b552d8758907b2ae81  boot/recovery.img-5.4-147-samsung-a52sxq
+919ed8c5aff042653d68c2da1dffb960  boot/vbmeta.img-5.4-147-samsung-a52sxq
+e1c026a80bbed82785bb52791db40ed2  lib/flash-bootimage/5.4-147-samsung-a52sxq.conf
+f01542a355c7efaa6dad006a629c4fc4  usr/share/doc/linux-bootimage-5.4-147-samsung-a52sxq/changelog.gz
